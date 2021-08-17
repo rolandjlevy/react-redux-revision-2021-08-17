@@ -7,19 +7,19 @@ const Counter = () => {
   const dispatch = useDispatch();
   return (
     <div>
+      <h4>Counter: {count}</h4>
+      <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+        -
+        </button>
       <button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
         +
         </button>
-      <button
-          aria-label="Increment value"
-          onClick={() => dispatch(decrement())}
-        >
-        -
-        </button>
-        Counter: {count}
     </div>
   )
 }

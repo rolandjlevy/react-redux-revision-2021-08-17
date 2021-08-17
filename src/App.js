@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h1>Hello Redux</h1>
+       <h1>Redux counter</h1>
        <Counter />
       </header>
     </div>
