@@ -1,17 +1,20 @@
-import { INC_COUNTER, DEC_COUNTER } from './actionTypes';
+import { INC_COUNTER, DEC_COUNTER } from '../actionTypes';
 
 const initialState = {
   count: 0
 }
 
-const reducer = (state = initialState, action) => {
+const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INC_COUNTER:
-      return {
+    const obj = {
         ...state,
         count: state.count + 1
       }
+    console.log({INC_COUNTER, obj});
+      return obj
     case DEC_COUNTER:
+    console.log({DEC_COUNTER});
       return {
         ...state,
         count: state.count - 1
@@ -21,4 +24,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer;
+export default counterReducer;

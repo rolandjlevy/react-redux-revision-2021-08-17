@@ -1,2 +1,4 @@
 export const INC_COUNTER = 'INC_COUNTER';
 export const DEC_COUNTER = 'DEC_COUNTER';
+export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
+export const GET_POSTS_ERROR = 'GET_POSTS_ERROR';

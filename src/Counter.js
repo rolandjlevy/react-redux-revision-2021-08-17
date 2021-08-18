@@ -1,9 +1,12 @@
 import React from 'react';
+import './index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './store/actions';
 
 const Counter = () => {
-  const count = useSelector(state => state.count);
+  const count = useSelector(state => {
+    return state.counterReducer.count;
+  });
   const dispatch = useDispatch();
   return (
     <div>
@@ -20,6 +23,7 @@ const Counter = () => {
         >
         +
         </button>
+        <div className="block" style={{ width: count * 10 , height: count * 10 }}></div>
     </div>
   )
 }
