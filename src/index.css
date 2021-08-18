@@ -8,7 +8,7 @@ body {
 }
 
 .block {
-  margin-top: 20px;
+  margin: 20px;
   background: grey;
   /* transform: translate(-50%, -50%); */
 }

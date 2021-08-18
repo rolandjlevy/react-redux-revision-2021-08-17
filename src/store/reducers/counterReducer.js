@@ -7,14 +7,11 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INC_COUNTER:
-    const obj = {
-        ...state,
-        count: state.count + 1
-      }
-    console.log({INC_COUNTER, obj});
-      return obj
+    return {
+      ...state,
+      count: state.count + 1
+    }
     case DEC_COUNTER:
-    console.log({DEC_COUNTER});
       return {
         ...state,
         count: state.count - 1
