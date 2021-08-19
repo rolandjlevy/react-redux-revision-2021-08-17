@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import Counter from './Counter';
+import Users from './Users';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <h1>Redux counter</h1>
        <Counter />
+       <Users />
       </header>
     </div>
   );

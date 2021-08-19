@@ -6,10 +6,12 @@ import {
 
 const initialState = {
   users: [],
-  isLoading: false
+  isLoading: false,
+  error: ''
 }
 
-const getPostsReducer = (state = initialState, action) => {
+const getUsersReducer = (state = initialState, action) => {
+  console.log('=== getUsersReducer')
   switch (action.type) {
     case FETCH_USERS_REQUEST:
       return {
@@ -17,16 +19,21 @@ const getPostsReducer = (state = initialState, action) => {
         isLoading: true
       }
     case FETCH_USERS_SUCCESS:
+      console.log('FETCH_USERS_SUCCESS', action.payload);
       return {
         ...state,
         users: action.payload,
         isLoading: false
+      }
+    case FETCH_USERS_ERROR:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
       }
     default:
       return state;
   }
 }
 
-export default getPostsReducer;
-
-// const url = 'https://jsonplaceholder.typicode.com/users';
+export default getUsersReducer;

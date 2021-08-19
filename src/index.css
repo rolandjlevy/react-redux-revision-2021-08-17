@@ -7,6 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, h4 {
+  margin: 5px 0;
+}
+
+hr {
+  margin: 15px 0;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
 .block {
   margin: 20px;
   background: grey;

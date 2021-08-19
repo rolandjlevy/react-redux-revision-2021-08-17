@@ -10,7 +10,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h4>Counter: {count}</h4>
+      <h2>Counter: {count}</h2>
       <button
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
@@ -23,7 +23,6 @@ const Counter = () => {
         >
         +
         </button>
-        <div className="block" style={{ width: count * 10 , height: count * 10 }}></div>
     </div>
   )
 }

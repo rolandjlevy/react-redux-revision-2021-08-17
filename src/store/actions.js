@@ -1,14 +1,28 @@
 import { 
   INC_COUNTER, 
   DEC_COUNTER, 
-  GET_POSTS_SUCCESS, 
-  GET_POSTS_ERROR
+  FETCH_USERS_REQUEST, 
+  FETCH_USERS_SUCCESS, 
+  FETCH_USERS_ERROR
 } from './actionTypes';
 
-export const getPosts = (data) => {
+export const fetchUsersRequest = () => {
   return {
-    type: GET_POSTS_SUCCESS,
+    type: FETCH_USERS_REQUEST
+  }
+}
+
+export const fetchUsersSuccess = (data) => {
+  return {
+    type: FETCH_USERS_SUCCESS,
     payload: data
+  }
+}
+
+export const fetchUsersError = (msg) => {
+  return {
+    type: FETCH_USERS_ERROR,
+    payload: msg
   }
 }
 
