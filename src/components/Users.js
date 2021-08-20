@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchUsersRequest, fetchUsersSuccess, fetchUsersError } from './store/actions';
+import { fetchUsersRequest, fetchUsersSuccess, fetchUsersError } from '../store/actions';
 
 const url = 'https://jsonplaceholder.typicode.com/users';
 
