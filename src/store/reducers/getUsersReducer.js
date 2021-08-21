@@ -11,7 +11,6 @@ const initialState = {
 }
 
 const getUsersReducer = (state = initialState, action) => {
-  console.log('=== getUsersReducer')
   switch (action.type) {
     case FETCH_USERS_REQUEST:
       return {
@@ -19,7 +18,6 @@ const getUsersReducer = (state = initialState, action) => {
         isLoading: true
       }
     case FETCH_USERS_SUCCESS:
-      console.log('FETCH_USERS_SUCCESS', action.payload);
       return {
         ...state,
         users: action.payload,

@@ -13,7 +13,7 @@ const Users = () => {
     return async function(dispatch) {
       dispatch(fetchUsersRequest());
       try {
-      const { data } = await axios.get(url);
+        const { data } = await axios.get(url);
         dispatch(fetchUsersSuccess(data));
       } catch(err) {
         dispatch(fetchUsersError(err.message));
@@ -22,20 +22,22 @@ const Users = () => {
   }
 
   const dispatchIt = useDispatch();
-  const usersReducer = useSelector(state => state.getUsersReducer);
+  
+  const {users, error, isLoading} = useSelector(state => state.getUsersReducer);
 
   return (
     <>
       <h2>Users</h2>
       <button onClick={() => dispatchAction(fetchUsersFromApi())}>Get users</button>
-      {usersReducer.users.length > 0 ? (usersReducer.users.map(user => (
+      <p>{isLoading ? 'Loading...' : ''}</p>
+      {users.length > 0 ? (users.map(user => (
         <section key={user.id}>
           <h4>{user.name}</h4>
           <p>{user.email}</p>
           <p>{user.website}</p>
           <hr />
         </section>
-      ))) : (usersReducer.error)}
+      ))) : (error)}
     </>
   )
 }
