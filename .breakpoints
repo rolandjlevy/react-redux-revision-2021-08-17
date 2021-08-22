@@ -1,5 +1,13 @@
 {
   "files": {
+    "src/App.test.js": [
+      {
+        "id": "8c8b4df1-0ab8-4fb8-9d1a-1f39d14dc515",
+        "line": 14,
+        "version": 158,
+        "index": 305
+      }
+    ],
     "src/store/actions.js": [
       {
         "id": "16e9ab86-8e3f-4764-912d-8c7cbc091cb2",
