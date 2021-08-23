@@ -3,9 +3,9 @@
     "src/App.test.js": [
       {
         "id": "8c8b4df1-0ab8-4fb8-9d1a-1f39d14dc515",
-        "line": 14,
-        "version": 158,
-        "index": 305
+        "line": 17,
+        "version": 380,
+        "index": 403
       }
     ],
     "src/store/actions.js": [

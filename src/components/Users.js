@@ -20,15 +20,13 @@ const Users = () => {
       }
     }
   }
-
-  const dispatchIt = useDispatch();
   
   const {users, error, isLoading} = useSelector(state => state.getUsersReducer);
 
   return (
     <>
       <h2>Users</h2>
-      <button onClick={() => dispatchAction(fetchUsersFromApi())}>Get users</button>
+      <button aria-label="Get users" onClick={() => dispatchAction(fetchUsersFromApi())}>Get users</button>
       <p>{isLoading ? 'Loading...' : ''}</p>
       {users.length > 0 ? (users.map(user => (
         <section key={user.id}>
